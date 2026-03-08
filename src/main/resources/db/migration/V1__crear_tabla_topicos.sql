@@ -1,0 +1,9 @@
+CREATE TABLE topicos (
+    id BIGSERIAL PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL UNIQUE,
+    mensaje TEXT NOT NULL UNIQUE,
+    fecha_creacion TIMESTAMP NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    autor VARCHAR(150) NOT NULL,
+    curso VARCHAR(150) NOT NULL
+);
