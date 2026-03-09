@@ -39,4 +39,19 @@ public class Topico {
         this.fechaCreacion = LocalDateTime.now();
         this.status = StatusTopico.NO_RESPONDIDO;
     }
+
+    public void actualizarDatos(DatosActualizarTopico datosActualizar) {
+        if (datosActualizar.titulo() != null && !datosActualizar.titulo().isBlank()) {
+            this.titulo = datosActualizar.titulo();
+        }
+        if (datosActualizar.mensaje() != null && !datosActualizar.mensaje().isBlank()) {
+            this.mensaje = datosActualizar.mensaje();
+        }
+        if (datosActualizar.curso() != null && !datosActualizar.curso().isBlank()) {
+            this.curso = datosActualizar.curso();
+        }
+        if (datosActualizar.status() != null) {
+            this.status = datosActualizar.status();
+        }
+    }
 }
